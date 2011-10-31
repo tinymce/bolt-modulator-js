@@ -24,7 +24,7 @@ define(
         };
 
         var load = function (define) {
-          define(id, [], function () { return null; });
+          define(id, [],  function () { return null; });
         };
 
         return {

@@ -2,10 +2,11 @@ define(
   'ephox.modulator.js.Modulator',
 
   [
+    'global!ephox.bolt.loader.api.scripttag'
   ],
 
-  function () {
-    var create = function (loader, pather, prefix, path) {
+  function (scripttag) {
+    var create = function (pather, prefix, path) {
       var wrapdefine = function (id, onsuccess, define) {
         return function () {
           define(id, [], function () { return null; });
@@ -22,7 +23,7 @@ define(
         var url = pather(path) + '/' + id.substring(length);
         var load = function (onsuccess, onfailure) {
           var wrapped = wrapdefine(id, onsuccess, define);
-          loader.load(url, wrapped, onfailure);
+          scripttag.load(url, wrapped, onfailure);
         };
 
         return {
