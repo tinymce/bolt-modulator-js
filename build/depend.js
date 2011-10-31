@@ -18,16 +18,5 @@ var dependencies = [
       lib + "/bolt/jsc",
       lib + "/bolt/bolt"
     ]
-  },
-
-  {
-    name: "yaml",
-    repository: "buildrepo2",
-    version: "latest",
-    source: "yaml.zip",
-    targets: [
-      { name: "module/*.js", path: lib + "/compile" },
-      { name: "licenses/*", path: licenses }
-    ]
   }
 ];
