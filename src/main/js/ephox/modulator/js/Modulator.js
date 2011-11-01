@@ -18,7 +18,7 @@ define(
         return id.indexOf("js!" + prefix + ":") === 0;
       };
 
-      var modulate = function (id, define, require) {
+      var get = function (id, define, require) {
         var length = ("js!" + prefix + ":").length;
         var url = pather(path) + '/' + id.substring(length);
         var load = function (onsuccess, onfailure) {
@@ -35,7 +35,7 @@ define(
 
       return {
         can: can,
-        modulate: modulate
+        get: get
       };
     };
 

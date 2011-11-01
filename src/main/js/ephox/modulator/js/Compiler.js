@@ -12,7 +12,7 @@ define(
          return id.indexOf("js!" + prefix + ":") === 0;
       };
 
-      var modulate = function (id) {
+      var get = function (id) {
         var length = ("js!" + prefix + ":").length;
         var url = pather(path) + '/' + id.substring(length);
 
@@ -37,7 +37,7 @@ define(
 
       return {
         can: can,
-        modulate: modulate
+        get: get
       };
     };
 
