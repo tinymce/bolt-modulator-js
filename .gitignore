@@ -6,4 +6,9 @@
 /scratch
 /dependency
 /config/bolt/bootstrap*.js
+/src/demo/config/bolt/bootstrap*.js
+/src/demo/dependency
+/src/demo/lib
+/src/demo/dist
+/src/demo/scratch
 *~
